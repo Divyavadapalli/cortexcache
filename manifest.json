@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "CortexCache",
+  "description": "Save and query web pages with CortexCache (extension)",
+  "version": "0.1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "externally_connectable": {
+    "matches": [
+      "https://localhost:5373/*",
+      "http://localhost:5373/*",
+      "https://localhost:5173/*",
+      "http://localhost:5173/*"
+    ]
+  },
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CortexCache"
+  }
+}
